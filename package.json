@@ -1,0 +1,19 @@
+{
+  "name": "food-tracker-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Food Tracker - Full Stack Application",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && PORT=3001 bin/rails server",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "lint": "cd frontend && npm run lint",
+    "test:backend": "cd backend && bin/rails test",
+    "test:frontend": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
